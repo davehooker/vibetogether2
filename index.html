@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIBE TOGETHER – Multisynq</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1602136773736-34d445b989cb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Orbitron', sans-serif;
+      color: #fcee09;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .glitch {
+      position: relative;
+      font-size: 4rem;
+      color: #fcee09;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      color: #ff003c;
+    }
+
+    .glitch::before {
+      top: -2px;
+      animation: glitchTop 2s infinite linear alternate-reverse;
+    }
+
+    .glitch::after {
+      top: 2px;
+      animation: glitchBottom 2s infinite linear alternate-reverse;
+    }
+
+    @keyframes glitchTop {
+      0% { clip: rect(0, 9999px, 0, 0); transform: translate(-2px, -2px); }
+      20% { clip: rect(5px, 9999px, 20px, 0); transform: translate(2px, -2px); }
+      40% { clip: rect(15px, 9999px, 25px, 0); transform: translate(-1px, 0px); }
+      60% { clip: rect(5px, 9999px, 15px, 0); transform: translate(1px, 1px); }
+      100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+    }
+
+    @keyframes glitchBottom {
+      0% { clip: rect(0, 9999px, 0, 0); transform: translate(2px, 2px); }
+      20% { clip: rect(25px, 9999px, 40px, 0); transform: translate(-2px, 1px); }
+      40% { clip: rect(15px, 9999px, 25px, 0); transform: translate(1px, 2px); }
+      60% { clip: rect(10px, 9999px, 20px, 0); transform: translate(-1px, -1px); }
+      100% { clip: rect(0, 9999px, 0, 0); transform: none; }
+    }
+
+    .logo {
+      width: 100px;
+      height: auto;
+      margin: 2rem 0;
+      filter: drop-shadow(0 0 10px #fff);
+    }
+
+    .cyber-button {
+      background: #fcee09;
+      color: #000;
+      font-size: 1.2rem;
+      padding: 1em 2.5em;
+      border: none;
+      cursor: pointer;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 90% 100%, 0 100%);
+      font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 0 10px #fcee09, 0 0 30px #ff003c inset;
+      transition: all 0.3s ease;
+    }
+
+    .cyber-button:hover {
+      background: #ff003c;
+      color: #fff;
+      box-shadow: 0 0 15px #ff003c, 0 0 30px #fcee09 inset;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Glitch Header -->
+  <div class="glitch" data-text="VIBE TOGETHER">VIBE TOGETHER</div>
+
+  <!-- Your White Sync Symbol -->
+  <img class="logo" src="white@1x.png" alt="Multisynq Symbol" />
+
+  <!-- CTA Button -->
+  <button class="cyber-button">VIBE CODE MULTIPLAYER NOW</button>
+
+</body>
+</html>
